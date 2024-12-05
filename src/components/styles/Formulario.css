@@ -1,6 +1,65 @@
-/* .form-amigo-secreto {
-  background-color:  #FFF9EB;
-  padding: 87px 149px;
+.form-amigo-secreto > h2 {
+  color: #4b69fd;
+
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 48px;
+  text-align: center;
+}
+
+.form-amigo-secreto > div {
+  background-color: #fff;
+
+  display: flex;
   border: 2px solid #000;
-  border-radius: 64px 64px 0 0;
-} */
+  border-radius: 37.5px;
+
+  box-shadow: 3px 5px 0px 1px #000;
+
+  position: relative;
+
+  padding-left: 70px;
+
+  width: 726px;
+  height: 82px;
+
+  margin: 30px 0;
+}
+
+.form-amigo-secreto > div svg {
+  position: absolute;
+  left: 35px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.form-amigo-secreto > div input {
+  color: rgba(68, 68, 68, 1);
+  border: none;
+
+  max-width: 500px;
+  width: 100%;
+}
+
+.form-amigo-secreto > div input:focus {
+  outline: none;
+}
+
+.form-amigo-secreto > div button {
+  color: rgba(68, 68, 68, 1);
+  background-color: #ccc;
+
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+
+  border: none;
+  border-left: 2px solid #000;
+  border-radius: 0 37.5px 37.5px 0;
+
+  cursor: pointer;
+
+  max-width: 227px;
+  width: 100%;
+}
