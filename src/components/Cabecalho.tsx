@@ -1,5 +1,5 @@
 // src/componentes/Cabecalho/index.tsx
-import './styles.css'
+import './styles/Cabecalho.css'
 
 const Cabecalho = () => {
     return (

@@ -1,10 +1,10 @@
 import React from 'react'
+
+import '../styles/Configuracao.css'
+import Cabecalho from '../Cabecalho'
 import Formulario from '../Formulario'
 import ListaParticipantes from '../ListaParticipantes'
 import Rodape from '../Rodape'
-import Cabecalho from '../Cabecalho'
-
-import '../styles/Configuracao.css'
 
 function Configuracao() {
 

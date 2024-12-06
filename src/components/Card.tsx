@@ -2,7 +2,7 @@
 
 import React from "react"
 
-import './estilos.css'
+import './styles/Card.css'
 
 const Card: React.FC = ({ children }) => {
     return (
