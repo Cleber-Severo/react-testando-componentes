@@ -1,0 +1,72 @@
+.form-div {
+  background-color: #fff;
+
+  display: flex;
+  border: 2px solid #000;
+  border-radius: 37.5px;
+
+  box-shadow: 3px 5px 0px 1px #000;
+
+  position: relative;
+
+  padding-left: 70px;
+  box-sizing: border-box;
+
+  width: 100%;
+  height: 82px;
+
+  margin: 30px 0;
+}
+
+@media screen and (min-width: 1440px) {
+  .form-div {
+    width: 85%;
+  }
+}
+
+.form-div svg {
+  position: absolute;
+  left: 35px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.form-div input {
+  color: rgba(68, 68, 68, 1);
+  border: none;
+
+  width: 100%;
+}
+
+.form-div select {
+  background-color: transparent;
+  color: rgba(68, 68, 68, 1);
+  border: none;
+
+  transform: translateX(-50px);
+
+  width: 100%;
+}
+
+.form-div input:focus {
+  outline: none;
+}
+
+.form-div button {
+  color: rgba(68, 68, 68, 1);
+  background-color: #ccc;
+
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+
+  border: none;
+  border-left: 2px solid #000;
+  border-radius: 0 37.5px 37.5px 0;
+
+  cursor: pointer;
+
+  max-width: 227px;
+  width: 100%;
+}

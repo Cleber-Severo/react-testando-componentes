@@ -1,12 +1,15 @@
-import React from 'react'
 import { useListaParticipantes } from '../state/hooks/useListaDeParticipantes'
+
+import './styles/ListaParticipantes.css'
 
 function ListaParticipantes() {
   const participantes: string[] = useListaParticipantes()
-  
+
   return (
-    <ul>
-      {participantes.map(participante => <li key={participante} >{participante}</li>)}
+    <ul className="lista-participantes">
+      {participantes.map((participante) => (
+        <li key={participante}>{participante}</li>
+      ))}
     </ul>
   )
 }
