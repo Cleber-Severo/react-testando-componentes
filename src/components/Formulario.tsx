@@ -1,44 +1,41 @@
-import React, { useRef, useState } from "react";
-import { useAdicionarParticipante } from "../state/hooks/useAdicionarParticipante";
-import { useMensagemDeErro } from "../state/hooks/useMensagemDeErro";
+import React, { useRef, useState } from 'react'
+import { useAdicionarParticipante } from '../state/hooks/useAdicionarParticipante'
+import { useMensagemDeErro } from '../state/hooks/useMensagemDeErro'
 
-import "./styles/Formulario.css";
-import ProfileIcon from "../assets/ProfileIcon";
+import './styles/Formulario.css'
+import ProfileIcon from '../assets/ProfileIcon'
+import TituloPrincipal from './TituloPrincipal'
+import FormDiv from './FormDiv'
 
 function Formulario() {
-  const [nome, setNome] = useState("");
+  const [nome, setNome] = useState('')
 
-  const inputRef = useRef<HTMLInputElement>(null);
-  const adicionarNaLista = useAdicionarParticipante();
+  const inputRef = useRef<HTMLInputElement>(null)
+  const adicionarNaLista = useAdicionarParticipante()
 
-  const mensagemDeErro = useMensagemDeErro();
+  const mensagemDeErro = useMensagemDeErro()
 
   const adicionarParticipante = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    adicionarNaLista(nome);
+    event.preventDefault()
+    adicionarNaLista(nome)
 
-    setNome("");
-    inputRef.current?.focus();
-  };
+    setNome('')
+    inputRef.current?.focus()
+  }
 
   return (
     <form onSubmit={adicionarParticipante} className="form-amigo-secreto">
-      <h2>Vamos começar!</h2>
-      <div>
+      <TituloPrincipal titulo="Vamos começar!" />
+
+      <FormDiv>
         <ProfileIcon />
-        <input
-          ref={inputRef}
-          value={nome}
-          onChange={(e) => setNome(e.target.value)}
-          type="text"
-          placeholder="Insira os nomes dos participantes"
-        />
+        <input ref={inputRef} value={nome} onChange={(e) => setNome(e.target.value)} type="text" placeholder="Insira os nomes dos participantes" />
 
         <button disabled={!nome}>Adicionar</button>
-      </div>
+      </FormDiv>
       {mensagemDeErro && <p role="alert">{mensagemDeErro}</p>}
     </form>
-  );
+  )
 }
 
-export default Formulario;
+export default Formulario
