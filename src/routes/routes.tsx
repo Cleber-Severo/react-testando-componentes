@@ -1,7 +1,7 @@
 import { createBrowserRouter } from 'react-router-dom'
-import Configuracao from '../components/paginas/Configuracao'
 import Home from '../components/paginas/Home'
 import Sorteador from '../components/Sorteio'
+import { Configuracao } from '../components/paginas/Configuracao'
 
 export const router = createBrowserRouter([
   {
